@@ -1,0 +1,49 @@
+@import "../../styles/index.scss";
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 11px 0;
+    min-height: 71px;
+
+    .header-div {
+        @include space-between;
+
+        .header-div1 {
+            @include flex;
+            
+            a {
+                display: block;
+                color: var(--font-color);
+                @include font16;
+                font-weight: 500;
+                margin-left: 20px;
+            }
+
+            .header-div1-text {
+                min-height: 48px;
+                @include flex;
+                margin-left: 40px;
+                border-right: 1px solid var(--border-color);
+
+                .header-div1-drop {
+                    margin-right: 40px;
+                    @include flex;
+                    gap: 8px;
+                    cursor: pointer;
+
+                    span {
+                        @include font12;
+                        font-weight: 700;
+                        color: var(--font-color);
+                        letter-spacing: .2em;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import '../../styles/index.scss';
+
+footer {
+    padding: 60px 0;
+    background: var(--font-color7);
+
+    .footer-logo {
+        @include space-between;
+
+        .footer-logo-media {
+            @include flex;
+            gap: 16px;
+        }
+    }
+
+    .footer-text {
+        padding: 40px 0 30px 0;
+        display: flex;
+        gap: 50px;
+        border-bottom: 1px solid var(--border-color2);
+
+        .footer-text-box {
+            color: var(--color-white);
+
+            h3 {
+                margin-bottom: 25px;
+                @include font16;
+                font-weight: 600;
+            }
+
+            a {
+                display: block;
+                color: var(--color-white);
+                @include font14;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .footer-last {
+        margin-top: 30px;
+        @include space-between;
+
+        h4 {
+            color: var(--font-color8);
+            @include font14;
+        }
+
+        .footer-last-img {
+            @include flex;
+            gap: 40px;
+        }
+    }
+}
