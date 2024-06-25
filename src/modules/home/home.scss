@@ -23,6 +23,15 @@
 
 .hero-banner {
     margin: 60px 0 100px 0;
+
+    @include breakpoint("md-max") {
+        margin: 45px 0 60px 0;
+    }
+
+    @include breakpoint("sm-max") {
+        margin: 30px 0 24px 0;
+    }
+
     .hero-banner-div {
         @include space-between;
 
@@ -32,24 +41,169 @@
                 color: var(--font-color6);
                 text-transform: uppercase;
                 letter-spacing: 1.5px;
+
+                @include breakpoint("sm-max") {
+                    display: none;
+                }
             }
 
             h2 {
                 @include font48;
                 color: var(--font-color2);
                 max-width: 500px;
+
+                @include breakpoint("sm-max") {
+                    @include font32;
+                    line-height: 40px;
+                    letter-spacing: -1.5px;
+                }
             }
 
             p {
                 @include font16;
                 color: var(--font-color5);
                 margin: 30px 0;
+
+                @include breakpoint("sm-max") {
+                    @include font14;
+                    margin: 4px 0 24px 0;
+                }
             }
         }
 
         .hero-banner-div2 {
             img {
                 max-width: 500px;
+
+                @include breakpoint("md-max") {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.fotos {
+    display: none;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+    @include breakpoint("sm-max") {
+        display: block;
+    }
+
+    .fotos-img {
+        position: relative;
+
+        img {
+            width: 100%;
+            margin-bottom: 18px;
+        }
+
+        .fotos-img-respo {
+            position: absolute;
+            top: 26px;
+            left: 30px;
+            padding: 14px 16px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            cursor: pointer;
+
+            img {
+                margin: 0;
+            }
+        }
+    }
+
+    .fotos-multy-img {
+        @include flex;
+        gap: 12px;
+        overflow-x: auto;
+
+        img {
+            width: 140px;
+        }
+    }
+
+    .fotos-div1-content {
+        padding: 25px 30px 0 30px; 
+
+        .fotos-div1-content1 {
+            @include space-between;
+
+            .fotos-div1-batch {
+                @include flex;
+                gap: 24px;
+            }
+
+            .fotos-div1-fotos {
+                @include flex;
+                gap: 12px;
+
+                img {
+                    width: 16px;
+                }
+
+                h3 {
+                    @include font16;
+                    font-weight: 600;
+                    color: var(--font-color7);
+                }
+            }
+        }
+
+        h2 {
+            @include font24;
+            color: var(--font-color2);
+            margin: 15px 0;
+        }
+
+        .fotos-div1-content2 {
+            @include flex;
+            gap: 16px;
+            border-bottom: 1px solid var(--border-input);
+            padding-bottom: 24px;
+
+            @include breakpoint("md-max") {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            @include breakpoint("sm-max") {
+                gap: 16px;
+            }
+
+            .fotos-div1-bed {
+                @include flex;
+                gap: 8px;
+
+                img {
+                    width: 16px;
+                }
+
+                h4 {
+                    @include font16;
+                    color: var(--font-color2);
+
+                    @include breakpoint("sm-max") {
+                        display: none;
+                    }
+                }
+
+                .fotos-div1-bed-respo {
+                    h4 {
+                        display: none;
+                        @include font16;
+                        color: var(--font-color2);
+
+                        @include breakpoint("sm-max") {
+                            display: block;
+                        }
+                    }
+                }
             }
         }
     }
@@ -59,10 +213,26 @@
     .meer-div {
         @include grid3c;
 
+        @include breakpoint("md-max") {
+            @include grid2c;
+        }
+
+        @include breakpoint("sm-max") {
+            display: none;
+        }
+
         .meer-div1 {
             box-shadow:
                 rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
                 rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+            &:last-child {
+                display: none;
+
+                @include breakpoint("md-max") {
+                    display: block;
+                }
+            }
 
             img {
                 width: 100%;
@@ -105,6 +275,11 @@
                     @include flex;
                     gap: 16px;
 
+                    @include breakpoint("md-max") {
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+
                     .meer-div1-bed {
                         @include flex;
                         gap: 8px;
@@ -127,18 +302,42 @@
 .beschrijving {
     margin: 100px 0;
 
+    @include breakpoint("sm-max") {
+        margin: 40px 0;
+    }
+
     .beschrijving-grid {
         display: grid;
         grid-template-columns: 1fr 40%;
         gap: 50px;
         align-items: center;
 
+        @include breakpoint("md-max") {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
         .beschrijving-grid1 {
             color: var(--font-color7);
             padding: 20px 50px;
 
+            @include breakpoint("md-max") {
+                padding: 0 40px 0 0;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 0;
+            }
+
             h2 {
                 @include font24;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                }
             }
 
             p {
@@ -158,8 +357,25 @@
             border-radius: 12px;
             margin-right: 20px;
 
+            @include breakpoint("md-max") {
+                margin: 0;
+                padding: 40px;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 0;
+                box-shadow: none;
+            }
+
             h2 {
                 @include font24;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                }
             }
 
             .beschrijving-grid2-box {
@@ -167,9 +383,18 @@
                 gap: 30px;
                 margin-top: 20px;
 
+                @include breakpoint("sm-max") {
+                    margin-top: 32px;
+                }
+
                 .bj-grid2-box-text {
                     border-bottom: 1px solid var(--border-color);
                     padding-bottom: 10px;
+
+                    @include breakpoint("sm-max") {
+                        border: none;
+                        padding: 0;
+                    }
 
                     span {
                         @include font14;
@@ -194,12 +419,32 @@
         gap: 50px;
         align-items: center;
 
+        @include breakpoint("md-max") {
+            grid-template-columns: 1fr;
+        }
+
+        @include breakpoint("sm-max") {
+            gap: 40px;
+        }
+
         .location-grid1 {
             padding: 20px 0 0 50px;
+
+            @include breakpoint("md-max") {
+                padding: 0;
+            }
+
             h2 {
                 @include font24;
                 color: var(--font-color7);
-                margin-bottom: 30px;
+                margin-bottom: 32px;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                }
             }
         }
 
@@ -208,6 +453,14 @@
                 @include font24;
                 color: var(--font-color7);
                 margin-bottom: 30px;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                    margin-bottom: 16px;
+                }
             }
 
             iframe {
@@ -215,6 +468,10 @@
                 min-height: 500px;
                 border: none;
                 border-radius: 12px;
+
+                @include breakpoint("sm-max") {
+                    min-height: 320px;
+                }
             }
         }
     }
@@ -223,19 +480,42 @@
 .regio {
     margin: 100px 0;
 
+    @include breakpoint("sm-max") {
+        margin: 40px 0;
+    }
+
     .regio-grid {
         display: grid;
         grid-template-columns: 1fr 40%;
         gap: 50px;
         align-items: center;
 
+        @include breakpoint("md-max") {
+            grid-template-columns: 1fr;
+        }
+
+        @include breakpoint("sm-max") {
+            gap: 40px;
+        }
+
         .regio-grid1 {
             padding-left: 50px;
+
+            @include breakpoint("md-max") {
+                padding: 0;
+            }
 
             h2 {
                 @include font24;
                 color: var(--font-color7);
-                margin-bottom: 30px;
+                margin-bottom: 32px;
+
+                @include breakpoint("sm-max") {
+                    @include font20;
+                    font-weight: 600;
+                    line-height: 32px;
+                    letter-spacing: -0.5px;
+                }
             }
 
             .regio-grid1-box {
@@ -264,7 +544,7 @@
                         h3 {
                             @include font24;
                             color: var(--color-white);
-                            margin: 24px;
+                            margin: 0 0 24px 24px;
                         }
                     }
                 }
@@ -310,6 +590,10 @@
             border-radius: 12px;
             height: fit-content;
 
+            @include breakpoint("md-max") {
+                margin: 0;
+            }
+
             h2 {
                 @include font24;
                 color: var(--font-color7);
@@ -332,43 +616,224 @@
     }
 }
 
+.profile {
+    display: none;
+    margin-bottom: 60px;
+
+    @include breakpoint("sm-max") {
+        display: block;
+    }
+
+    .profile-div {
+        padding: 16px 24px 56px 24px;
+        border-bottom: 1px solid var(--border-color4);
+
+        p {
+            @include font18;
+            color: var(--font-color2);
+            font-weight: 600;
+            max-width: 300px;
+        }
+
+        .profile-grid1-profile {
+            margin-top: 40px;
+            display: flex;
+            gap: 18px;
+
+            .profile-img {
+                img {
+                    width: 50px;
+                    max-height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .profile-text {
+                h3 {
+                    @include font16;
+                    color: var(--font-color2);
+                    font-weight: 600;
+                }
+                a {
+                    @include font14;
+                    font-weight: 500;
+                    color: var(--font-color7);
+                    @include flex;
+                    gap: 10px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .profile-div2 {
+        padding-top: 24px;
+        text-align: center;
+        color: var(--font-color2);
+        @include font14;
+        font-weight: 600;
+    }
+}
+
 .woningen {
+
+    ::-webkit-scrollbar {
+        width: 7px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #ebe9e5;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #D9D7D4;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
     .woningen-head {
         h2 {
             @include font24;
             color: var(--font-color7);
-            margin-bottom: 30px;
+            margin-bottom: 32px;
+
+            @include breakpoint("sm-max") {
+                @include font20;
+                font-weight: 600;
+                line-height: 32px;
+                letter-spacing: -0.5px;
+            }
         }
     }
     .woningen-div {
         @include grid3c;
 
+        @include breakpoint("md-max") {
+            @include grid2c;
+        }
+
+        @include breakpoint("sm-max") {
+            @include grid4c;
+            overflow-x: scroll;
+        }
+
         .woningen-div1 {
             box-shadow:
                 rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
                 rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            min-width: 250px;
 
-            img {
-                width: 100%;
+            &:last-child {
+                display: none;
+
+                @include breakpoint("md-max") {
+                    display: block;
+                }
+
+                @include breakpoint("sm-max") {
+                    box-shadow: none;
+                }
+            }
+
+            .woningen-div1-img {
+                position: relative;
+
+                img {
+                    width: 100%;
+
+                    @include breakpoint("sm-max") {
+                        border-radius: 6px;
+                    }
+                }
+
+                .woningen-div1-img-top {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    justify-content: flex-end;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.41) 0%, rgba(0, 0, 0, 0) 20.68%);
+                    border-radius: 6px;
+
+                    @include breakpoint("sm-max") {
+                        display: block;
+                    }
+
+                    .woningen-batch {
+                        height: 50%;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        img {
+                            width: 32px;
+                            max-height: 32px;
+                            padding: 7px;
+                            background-color: var(--color-white);
+                            border-radius: 50%;
+                            margin: 8px;
+                        }
+                    }
+
+                    .woningen-batch2 {
+                        height: 50%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+
+                        h2 {
+                            @include font14;
+                            font-weight: 500;
+                            margin: 8px;
+                            padding: 4px 10px;
+                            color: var(--color-white);
+                            border-radius: 24px;
+                            background-color: var(--font-color9);
+                        }
+                    }
+                }
             }
 
             .woningen-div1-content {
                 padding: 25px;
 
+                @include breakpoint("sm-max") {
+                    padding: 16px 0 30px 0;
+                }
+
                 p {
                     @include font16;
                     color: var(--font-color2);
+
+                    @include breakpoint("sm-max") {
+                        font-weight: 600;
+                        margin-bottom: 12px;
+                    }
                 }
 
                 h2 {
                     @include font24;
                     color: var(--font-color2);
                     margin: 15px 0;
+
+                    @include breakpoint("sm-max") {
+                        display: none;
+                    }
                 }
 
                 .woningen-div1-content1 {
                     @include flex;
                     gap: 16px;
+
+                    @include breakpoint("md-max") {
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+
+                    @include breakpoint("sm-max") {
+                        gap: 16px;
+                    }
 
                     .woningen-div1-bed {
                         @include flex;
@@ -381,6 +846,22 @@
                         h4 {
                             @include font16;
                             color: var(--font-color2);
+
+                            @include breakpoint("sm-max") {
+                                display: none;
+                            }
+                        }
+
+                        .woningen-div1-bed-respo {
+                            h4 {
+                                display: none;
+                                @include font16;
+                                color: var(--font-color2);
+
+                                @include breakpoint("sm-max") {
+                                    display: block;
+                                }
+                            }
                         }
                     }
                 }
@@ -392,13 +873,32 @@
 .stegen {
     margin: 100px 0;
 
+    @include breakpoint("sm-max") {
+        margin: 60px 0 0 0;
+        background-color: var(--bgcolor2);
+    }
+
     .stegen-grid {
         @include grid2c;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         padding: 40px;
         background-color: var(--bgcolor2);
 
+        @include breakpoint("md-max") {
+            @include grid1c;
+            gap: 40px;
+        }
+
+        @include breakpoint("sm-max") {
+            box-shadow: none;
+            padding: 60px 0;
+        }
+
         .stegen-grid1 {
+            @include breakpoint("sm-max") {
+                display: none;
+            }
+
             p {
                 @include font16;
                 color: var(--font-color2);
@@ -443,15 +943,28 @@
 
             h2 {
                 @include font24;
+
+                @include breakpoint("sm-max") {
+                    text-align: center;
+                }
             }
+
             p {
                 @include font16;
                 margin: 12px 0 30px 0;
+
+                @include breakpoint("sm-max") {
+                    text-align: center;
+                }
             }
 
             .stegen-grid2-input {
                 position: relative;
                 width: 350px;
+
+                @include breakpoint("sm-max") {
+                    width: 100%;
+                }
 
                 input {
                     width: 100%;
@@ -467,6 +980,10 @@
                     }
                 }
 
+                ::placeholder {
+                    color: var(--font-color7);
+                }
+
                 .input-right-arrow {
                     position: absolute;
                     top: 12px;
@@ -475,12 +992,23 @@
                     border: 1px solid var(--border-color3);
                     border-radius: 52px;
                     background-color: var(--bgcolor2);
+                    cursor: pointer;
 
                     img {
                         width: 16px;
                     }
                 }
             }
+        }
+    }
+
+    .orange-line {
+        padding: 16px;
+        background-color: var(--bgcolor3);
+        display: none;
+
+        @include breakpoint("sm-max") {
+            display: block;
         }
     }
 }
@@ -491,18 +1019,29 @@
     background-position: top center;
 
     .nog-green {
-        padding: 200px 0;
+        padding: 200px 30px;
         text-align: center;
         color: var(--color-white);
         background: var(--bgcolor-blur);
 
+        @include breakpoint("sm-max") {
+            padding: 100px 30px;
+        }
+
         h6 {
             @include font48;
+            text-transform: uppercase;
+            font-family: var(--font-family-shoulders);
+
+            @include breakpoint("sm-max") {
+                @include font42;
+            }
         }
 
         p {
             margin: 20px 0 40px 0;
             @include font16;
+            font-weight: 600;
         }
     }
 }

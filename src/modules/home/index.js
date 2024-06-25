@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.scss';
-import { more, deel, bed, bath, batch, vr, fordot, rightArrow, mail } from '../../assets/images/svg';
+import { more, deel, bed, bath, batch, vr, fordot, rightArrow, mail, lessArrow } from '../../assets/images/svg';
 import { heroBanner, horadada } from '../../assets/images/jpg';
 import { meer1, meer2, meer3, lady } from '../../assets/images/png';
 
@@ -32,6 +32,51 @@ export default function Home() {
             </div>
             <div className="hero-banner-div2">
               <img src={heroBanner} alt="heroBanner" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='fotos'>
+        <div className="fotos-img">
+          <img src={meer1} alt="meer1" />
+          <div className="fotos-img-respo">
+            <img src={lessArrow} alt="lessArrow" />
+          </div>
+        </div>
+        <div className="fotos-multy-img">
+          <img src={meer1} alt="meer1" />
+          <img src={meer2} alt="meer2" />
+          <img src={meer3} alt="meer3" />
+          <img src={meer1} alt="meer1" />
+          <img src={meer2} alt="meer2" />
+          <img src={meer3} alt="meer3" />
+        </div><div className="fotos-div1-content">
+          <div className="fotos-div1-content1">
+            <div className="fotos-div1-batch">
+              <img src={batch} alt="batch" />
+              <img src={vr} alt="vr" />
+            </div>
+            <div className="fotos-div1-fotos">
+              <img src={fordot} alt="fordot" />
+              <h3>Meer Foto's</h3>
+            </div>
+          </div>
+          <h2>€ 2.000.995</h2>
+          <div className="fotos-div1-content2">
+            <div className="fotos-div1-bed">
+              <img src={bed} alt="bed" />
+              <h4>3 Slaapkamers</h4>
+              <div className="fotos-div1-bed-respo">
+                <h4>3</h4>
+              </div>
+            </div>
+            <div className="fotos-div1-bed">
+              <img src={bath} alt="bath" />
+              <h4>2 Badkamers</h4>
+              <div className="fotos-div1-bed-respo">
+                <h4>2</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -114,6 +159,32 @@ export default function Home() {
                   <div className="meer-div1-bed">
                     <img src={bath} alt="bath" />
                     <h4>1 Badkamers</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="meer-div1">
+              <img src={meer1} alt="meer1" />
+              <div className="meer-div1-content">
+                <div className="meer-div1-content1">
+                  <div className="meer-div1-batch">
+                    <img src={batch} alt="batch" />
+                    <img src={vr} alt="vr" />
+                  </div>
+                  <div className="meer-div1-fotos">
+                    <img src={fordot} alt="fordot" />
+                    <h3>Meer Foto's</h3>
+                  </div>
+                </div>
+                <h2>€ 2.000.995</h2>
+                <div className="meer-div1-content2">
+                  <div className="meer-div1-bed">
+                    <img src={bed} alt="bed" />
+                    <h4>3 Slaapkamers</h4>
+                  </div>
+                  <div className="meer-div1-bed">
+                    <img src={bath} alt="bath" />
+                    <h4>2 Badkamers</h4>
                   </div>
                 </div>
               </div>
@@ -223,6 +294,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className='profile'>
+        <div className="container">
+          <div className="profile-div">
+            <p>Bij Puurspanje weten we hoe belangrijk een persoonlijke aanpak is.</p>
+            <div className="profile-grid1-profile">
+              <div className="profile-img">
+                <img src={lady} alt="lady" />
+              </div>
+              <div className="profile-text">
+                <h3>Daphne van der Stegen</h3>
+                <a href="mailid">Stuur een email <img src={mail} alt="mail" /></a>
+              </div>
+            </div>
+          </div>
+          <div className="profile-div2">
+            Rapporteer deze vermelding
+          </div>
+        </div>
+      </section>
+
       <section className='woningen'>
         <div class="container">
           <div class="woningen-head">
@@ -230,7 +321,17 @@ export default function Home() {
           </div>
           <div className="woningen-div">
             <div className="woningen-div1">
-              <img src={meer1} alt="meer1" />
+              <div className="woningen-div1-img">
+                <img src={meer1} alt="meer1" />
+                <div className="woningen-div1-img-top">
+                  <div className="woningen-batch">
+                    <img src={batch} alt="batch" />
+                  </div>
+                  <div className="woningen-batch2">
+                    <h2>€ 550.000</h2>
+                  </div>
+                </div>
+              </div>
               <div className="woningen-div1-content">
                 <p>Appartement in San Pedro del Pinatar, Costa Cálida, Spanje</p>
                 <h2>€ 550.000</h2>
@@ -238,16 +339,32 @@ export default function Home() {
                   <div className="woningen-div1-bed">
                     <img src={bed} alt="bed" />
                     <h4>3 Slaapkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>3</h4>
+                    </div>
                   </div>
                   <div className="woningen-div1-bed">
                     <img src={bath} alt="bath" />
                     <h4>2 Badkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>2</h4>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="woningen-div1">
-              <img src={meer1} alt="meer1" />
+              <div className="woningen-div1-img">
+                <img src={meer1} alt="meer1" />
+                <div className="woningen-div1-img-top">
+                  <div className="woningen-batch">
+                    <img src={batch} alt="batch" />
+                  </div>
+                  <div className="woningen-batch2">
+                    <h2>€ 550.000</h2>
+                  </div>
+                </div>
+              </div>
               <div className="woningen-div1-content">
                 <p>Appartement in San Pedro del Pinatar, Costa Cálida, Spanje</p>
                 <h2>€ 550.000</h2>
@@ -255,16 +372,32 @@ export default function Home() {
                   <div className="woningen-div1-bed">
                     <img src={bed} alt="bed" />
                     <h4>3 Slaapkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>3</h4>
+                    </div>
                   </div>
                   <div className="woningen-div1-bed">
                     <img src={bath} alt="bath" />
                     <h4>2 Badkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>2</h4>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="woningen-div1">
-              <img src={meer1} alt="meer1" />
+              <div className="woningen-div1-img">
+                <img src={meer1} alt="meer1" />
+                <div className="woningen-div1-img-top">
+                  <div className="woningen-batch">
+                    <img src={batch} alt="batch" />
+                  </div>
+                  <div className="woningen-batch2">
+                    <h2>€ 550.000</h2>
+                  </div>
+                </div>
+              </div>
               <div className="woningen-div1-content">
                 <p>Appartement in San Pedro del Pinatar, Costa Cálida, Spanje</p>
                 <h2>€ 550.000</h2>
@@ -272,10 +405,49 @@ export default function Home() {
                   <div className="woningen-div1-bed">
                     <img src={bed} alt="bed" />
                     <h4>3 Slaapkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>3</h4>
+                    </div>
                   </div>
                   <div className="woningen-div1-bed">
                     <img src={bath} alt="bath" />
                     <h4>2 Badkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>2</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="woningen-div1">
+              <div className="woningen-div1-img">
+                <img src={meer1} alt="meer1" />
+                <div className="woningen-div1-img-top">
+                  <div className="woningen-batch">
+                    <img src={batch} alt="batch" />
+                  </div>
+                  <div className="woningen-batch2">
+                    <h2>€ 550.000</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="woningen-div1-content">
+                <p>Appartement in San Pedro del Pinatar, Costa Cálida, Spanje</p>
+                <h2>€ 550.000</h2>
+                <div className="woningen-div1-content1">
+                  <div className="woningen-div1-bed">
+                    <img src={bed} alt="bed" />
+                    <h4>3 Slaapkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>3</h4>
+                    </div>
+                  </div>
+                  <div className="woningen-div1-bed">
+                    <img src={bath} alt="bath" />
+                    <h4>2 Badkamers</h4>
+                    <div className="woningen-div1-bed-respo">
+                      <h4>2</h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -311,6 +483,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="orange-line"></div>
       </section>
 
       <section class="last-section">

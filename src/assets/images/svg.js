@@ -14,7 +14,9 @@ import Instagram from '../../assets/images/svg/Instagram.svg';
 import twitter from '../../assets/images/svg/twitter.svg';
 import rightArrow from '../../assets/images/svg/rightArrow.svg';
 import mail from '../../assets/images/svg/mail.svg';
+import menu from '../../assets/images/svg/menu.svg';
+import lessArrow from '../../assets/images/svg/lessArrow.svg';
 
 export {
-  logo, dropdown, more, deel, batch, bath, bed, fordot, vr, logoWhite, Facebook, Instagram, twitter, rightArrow, mail
+  logo, dropdown, more, deel, batch, bath, bed, fordot, vr, logoWhite, Facebook, Instagram, twitter, rightArrow, mail, menu, lessArrow
 };

@@ -18,6 +18,7 @@ footer {
         display: flex;
         gap: 50px;
         border-bottom: 1px solid var(--border-color2);
+        flex-wrap: wrap;
 
         .footer-text-box {
             color: var(--color-white);
@@ -41,6 +42,11 @@ footer {
         margin-top: 30px;
         @include space-between;
 
+        @include breakpoint("md-max") {
+          flex-wrap: wrap;
+          gap: 40px;
+        }
+
         h4 {
             color: var(--font-color8);
             @include font14;
@@ -49,6 +55,7 @@ footer {
         .footer-last-img {
             @include flex;
             gap: 40px;
+            flex-wrap: wrap;
         }
     }
 }

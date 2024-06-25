@@ -10,8 +10,8 @@ $breakpoints-min: (
 ) !default;
 $breakpoints-max: (
   "xs-max": 319px,
-  "sm-max": 767px,
-  "md-max": 1023px,
+  "sm-max": 576px,
+  "md-max": 1024px,
   "lg-max": 1279px
 ) !default;
 @mixin breakpoint($breakpoint) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.scss';
-import { logo, dropdown } from '../../assets/images/svg';
+import { logo, dropdown, menu } from '../../assets/images/svg';
 
 export default function Header() {
   return (
@@ -28,6 +28,9 @@ export default function Header() {
             </div>
             <div className="header-div2">
               <button>Zoekprofilel</button>
+            </div>
+            <div className="header-menu">
+              <img src={menu} alt="menu" />
             </div>
           </div>
         </div>

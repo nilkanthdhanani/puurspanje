@@ -1,3 +1,5 @@
+@import '../breakpoints/breakpoint';
+
 .header-div2 {
     button {
         padding: 12px 24px;
@@ -11,6 +13,10 @@
         border-radius: 4px;
         cursor: pointer;
     }
+
+    @include breakpoint("md-max") {
+        display: none;
+    }
 }
 
 .hero-banner-div1-button {
@@ -18,12 +24,13 @@
         @include flex;
         gap: 10px;
         padding: 10px 20px;
+        @include font16;
         font-weight: 600;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: var(--color-white);
+        color: var(--font-color2);
         border: none;
-        background-color: var(--color-black);
+        background-color: transparent;
         border-radius: 4px;
         cursor: pointer;
         transition: 0.3s ease-in-out;
@@ -39,6 +46,10 @@
     @include flex;
     gap: 20px;
     flex-wrap: wrap;
+
+    @include breakpoint("sm-max") {
+        gap: 10px;
+    }
 
     button {
         padding: 10px 20px;
@@ -56,6 +67,10 @@
             background-color: var(--color-black);
             color: var(--color-white);
             transition: 0.3s ease-in-out;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 6px 12px;
         }
     }
 }
@@ -77,6 +92,10 @@
             background-color: var(--color-black);
             color: var(--color-white);
             transition: 0.3s ease-in-out;
+        }
+
+        @include breakpoint("sm-max") {
+            min-width: 144px;
         }
     }
 }
@@ -118,7 +137,7 @@
 
 .rgc-button {
     button {
-        @include flex;
+        @include flex-center;
         gap: 10px;
         padding: 12px 70px;
         font-weight: 600;
@@ -134,6 +153,11 @@
         &:hover {
             background-color: var(--bgcolor);
             transition: 0.3s ease-in-out;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 12px;
+            width: 100%;
         }
     }
 }

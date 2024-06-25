@@ -13,15 +13,23 @@ header {
     .header-div {
         @include space-between;
 
+        @include breakpoint("md-max") {
+          min-height: 48px;
+        }
+
         .header-div1 {
             @include flex;
-            
+
             a {
                 display: block;
                 color: var(--font-color);
                 @include font16;
                 font-weight: 500;
                 margin-left: 20px;
+
+                @include breakpoint("md-max") {
+                  display: none;
+                }
             }
 
             .header-div1-text {
@@ -29,6 +37,10 @@ header {
                 @include flex;
                 margin-left: 40px;
                 border-right: 1px solid var(--border-color);
+
+                @include breakpoint("md-max") {
+                  display: none;
+                }
 
                 .header-div1-drop {
                     margin-right: 40px;
@@ -40,9 +52,17 @@ header {
                         @include font12;
                         font-weight: 700;
                         color: var(--font-color);
-                        letter-spacing: .2em;
+                        letter-spacing: 0.2em;
                     }
                 }
+            }
+        }
+
+        .header-menu {
+            display: none;
+
+            @include breakpoint("md-max") {
+              display: block;
             }
         }
     }
